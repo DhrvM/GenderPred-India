@@ -1,1 +1,91 @@
-# GenderPred-India
+
+# GenderPred-IN
+GenderPred-IN is a Python package that predicts the gender of a person based on their name. It is specifically suited for Indian names.
+
+
+## Getting Started
+### Installation
+**You can install the package using pip (easy-peasy way):**
+```bash
+pip  install  genderpred_in
+```
+**or you can use **github** to install (harder way):**
+
+ 1. Clone the repository:
+ ```bash
+ git clone https://github.com/DhrvM/GenderPred-India.git
+cd GenderPred-India
+ ```
+ 3. Install the package:
+ ```bash
+ pip install .
+```
+ 5. Verify the installation:
+ ```bash
+ pip list
+ ```
+
+### Usage
+
+**Import Package**
+```python
+from genderpred_in import classify_name, get_name, get_first_name, get_male_probability, get_female_probability, get_gender
+```
+**Here is an example of how to use the package:**
+```python
+# Classify the name "Rohit"
+result = classify_name("Rohit")
+
+# Retrieve and print the results
+full_name = get_name(result)
+first_name = get_first_name(result)
+male_prob = get_male_probability(result)
+female_prob = get_female_probability(result)
+gender = get_gender(result)
+
+print(f"Full Name: {full_name}")
+print(f"First Name: {first_name}")
+print(f"Male Probability: {male_prob}")
+print(f"Female Probability: {female_prob}")
+print(f"Gender: {gender}")
+```
+
+### Example Output:
+
+```bash
+Full Name: Rohit
+First Name: ROHIT
+Male Probability: 0.9916077852249146
+Female Probability: 0.008392222225666046
+Gender: male
+```
+
+### Functions
+-   `classify_name(full_name)`: Classifies the given full name and returns a dictionary with the name, first name, gender, and probabilities.
+-   `get_name(result)`: Retrieves the full name from the classification result.
+-   `get_first_name(result)`: Retrieves the first name from the classification result.
+-   `get_male_probability(result)`: Retrieves the male probability from the classification result.
+-   `get_female_probability(result)`: Retrieves the female probability from the classification result.
+-   `get_gender(result)`: Retrieves the predicted gender from the classification result. (Output: *male, female, unknown*)
+
+## Versions
+`Version 1.0.1` Uses LSTM model with a tokenized First-Name to Generate Predictions of Gender.
+## Built With
+
+-   [TensorFlow](https://www.tensorflow.org/) - The machine learning framework used
+-   [Keras](https://keras.io/) - High-level neural networks API
+-   [NumPy](https://numpy.org/) - Used for numerical computing
+-   [Pandas](https://pandas.pydata.org/) - Data manipulation and analysis
+
+## Authors
+**Dhruv Malpani** - Initial Work
+[LinkedIn](https://www.linkedin.com/in/dhruv-malpani/)
+[GitHub](https://github.com/DhrvM)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+[**Praneeth Vasarla**](https://medium.com/@praneethvaasarla)
+Your article helped me create the initial model using Logistic Regression and n-grams. ([article](https://medium.com/@praneethvaasarla/how-i-used-nlp-to-predict-the-gender-for-indian-names-df0ae30c275b))
