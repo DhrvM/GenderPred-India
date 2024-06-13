@@ -76,7 +76,7 @@ Gender: male
 -   `get_gender(result)`: Retrieves the predicted gender from the classification result. (Output: *male, female, unknown*)
 
 ## Versions
-`Version 1.0.2` Fixed Model loading error for Windows.
+`Version 1.0.2` Fixed Model loading error for Windows.\
 `Version 1.0.1` Uses LSTM model with a tokenized First-Name to Generate Predictions of Gender.
 
 
