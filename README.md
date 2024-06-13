@@ -1,6 +1,12 @@
 
 # GenderPred-IN
-GenderPred-IN is a Python package that predicts the gender of a person based on their name. It is specifically suited for Indian names.
+GenderPred-IN is a Python package designed to predict the gender of a person based on their name. It is specifically tailored for Indian names, leveraging advanced machine learning techniques to provide accurate predictions.
+
+### Features
+- LSTM Model: Utilizes a Long Short-Term Memory (LSTM) neural network model to understand the sequential patterns in names.
+- Tokenizer and Label Encoder: Processes names through a trained tokenizer and label encoder to convert names into a format suitable for the LSTM model.
+- Pre-trained Model: Comes with a pre-trained model, eliminating the need for extensive training and setup.
+- User-friendly: Simple and easy-to-use functions to get predictions with minimal setup.
 
 
 ## Getting Started
