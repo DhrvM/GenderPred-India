@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import os
 import codecs
 
-VERSION = '1.0.1'
+VERSION = '1.0.2'
 DESCRIPTION = 'A Package to Predict the Gender of a Person based on their Name (Suited for Indian Names)'
 # Read the contents of your README file
 with codecs.open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README.md'), encoding='utf-8') as f:
@@ -34,4 +34,8 @@ setup(
     ],
     keywords='gender, indian, names, LSTM, tensorflow, keras, classify, prediction',
     python_requires='>=3.10',
+    include_package_data=True,
+    package_data={
+        'genderpred_in': ['tokenizer.pickle', 'label_encoder.pickle', 'gender_prediction_model.h5'],
+    },
 )

@@ -1,7 +1,7 @@
 from genderpred_in import classify_name, get_name, get_first_name, get_male_probability, get_female_probability, get_gender
 
 # Classify the name "Rohit"
-result = classify_name("Rohit")
+result = classify_name("dhruv malpani")
 
 # Retrieve and print the results
 full_name = get_name(result)

@@ -8,12 +8,10 @@ from tensorflow.keras.models import Sequential
 import logging
 import re
 
-
-
 # Load the tokenizer and label encoder
-with open('genderpred_in/tokenizer.pickle', 'rb') as handle:
+with open(os.path.join(os.path.dirname(__file__), 'tokenizer.pickle'), 'rb') as handle:
     tokenizer = pickle.load(handle)
-with open('genderpred_in/label_encoder.pickle', 'rb') as handle:
+with open(os.path.join(os.path.dirname(__file__), 'label_encoder.pickle'), 'rb') as handle:
     label_encoder = pickle.load(handle)
 
 # Define the LSTM model
@@ -22,7 +20,7 @@ model.add(Embedding(input_dim=len(tokenizer.word_index) + 1, output_dim=50))
 model.add(LSTM(units=128, return_sequences=False))
 model.add(Dropout(0.5))
 model.add(Dense(units=3, activation='softmax'))
-model = load_model('genderpred_in/gender_prediction_model.h5')
+model = load_model(os.path.join(os.path.dirname(__file__), 'gender_prediction_model.h5'))
 model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # Ensure max_length matches the training configuration

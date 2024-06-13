@@ -1,0 +1,3 @@
+include genderpred_in/tokenizer.pickle
+include genderpred_in/label_encoder.pickle
+include genderpred_in/gender_prediction_model.h5
