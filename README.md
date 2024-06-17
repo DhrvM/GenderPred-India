@@ -29,7 +29,7 @@ cd GenderPred-India
 ```
  5. Verify the installation:
  ```bash
- pip list
+ pip show genderpred_in
  ```
 
 ### Usage
